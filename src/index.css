@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/plus-jakarta-sans-v11-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/plus-jakarta-sans-v11-latin-700.woff2') format('woff2');
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    overflow: hidden;
+}
+
+.containers {
+    max-width: 1100px;
+    margin: 0 auto
+}
+
+.part-right {
+    background: linear-gradient(159.02deg, #0F123B 14.25%, #090D2E 56.45%, #020515 86.14%);
+}
+
+.part-left {
+    background-image: url(../src/assets/images/Login-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.part-leftt {
+    background-image: url(../src/assets/images/registr-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dashboard-bg {
+    background-image: url(../src/assets/images/dashboard.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-need {
+    margin-top: 100px;
+    background-image: url(../src/assets/images/need-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 169px;
+    width: 218px;
+}
+.marking{
+    background-image: url(../src/assets/images/mark-johnson.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 430px;
+    height: 245px;
+}
+.rating{
+    background-image: url(../src/assets/images/rate-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 245px;
+}
+.traking{
+    background-image: url(../src/assets/images/traking.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 360px;
+    height: 245px;
+}
+.sales{
+    background-image: url(../src/assets/images/sales.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+    width: 615px;
+    height: 305px;
+}
+.active-img{
+    background-image: url(../src/assets/images/activ-users.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+    width: 435px;
+    height: 308px;
+}
+.project{
+    background-image: url(../src/assets/images/project.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 680px;
+    height: 370px;   
+}
+
+.bgg {
+    background: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
+}
+
+.text-t {
+    background: linear-gradient(94.56deg, #FFFFFF 79.99%, #21242F 102.65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.border-input {
+    border-image-source: radial-gradient(69.43% 69.43% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
+        radial-gradient(60% 51.57% at 50% 50%, #582CFF 0%, rgba(88, 44, 255, 0) 100%),
+        radial-gradient(54.8% 53% at 50% 50%, #151515 0%, rgba(21, 21, 21, 0) 100%);
+    backdrop-filter: blur(42px)
+}
+
+.borderb {
+    background: linear-gradient(123.64deg, rgba(255, 255, 255, 0) -22.38%, rgba(255, 255, 255, 0.039) 70.38%);
+}
+
+.borderp {
+    background: linear-gradient(111.84deg, rgba(6, 11, 38, 0.94) 59.3%, rgba(26, 31, 55, 0) 100%);
+}
+
+.active-class {
+    padding: 5px 0 5px 10px;
+    background: #1A1F37;
+    border-radius: 12px;
+}
+
+.bgbb {
+    background: linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%);
+}
+
+/* html,
+body {
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+} */
