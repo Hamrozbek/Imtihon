@@ -8,5 +8,11 @@ import Project_img from "../images/project.png"
 import Orders_img from "../images/orders.png"
 import Avvt from "../images/avvt.png"
 import HtmlIcon from "../images/html.svg"
+import Esthera from "../images/Esthera.svg"
+import Freduardo from "../images/Freduardo.svg"
+import Daniel from "../images/Daniel.svg"
+import Alex from "../images/Alexa.svg"
+import Laurent from "../images/Laurent.svg"
+import Mark from "../images/Mark.svg"
 
-export {HtmlIcon, Avvt,Remember, Mark_johnson, Rate_img, Traking_img, Sales_img, Active_img, Project_img, Orders_img}
+export { Esthera , Freduardo, Daniel,Alex, Laurent, Mark,HtmlIcon, Avvt,Remember, Mark_johnson, Rate_img, Traking_img, Sales_img, Active_img, Project_img, Orders_img}
