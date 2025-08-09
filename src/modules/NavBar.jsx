@@ -4,7 +4,7 @@ import SideBarItem from "../components/SideBarItem"
 
 const NavBar = () => {
   return (
-    <div className='w-[20%] min-h-screen p-[10px]'>
+    <div className='w-[20%] min-h-screen p-[8px]'>
       <div className="mx-auto p-[17px] rounded-[20px] borderp">
         <Heading tag={"h3"} extraClass={"!text-t !text-center"} title={"VISION UI FREE"} />
         <p className="border-b-[1px] pt-[30px] border-white"></p>
@@ -13,11 +13,12 @@ const NavBar = () => {
           <SideBarItem to={"/tables"} icon={<TablesIcon/>} title={"Tables"}/>
           <SideBarItem to={"/billing"} icon={<BillingIcon/>} title={"Billing"}/>
           <SideBarItem to={"/rtl"} icon={<RtlIcon/>} title={"RTL"}/>
+          <Heading extraClass={"!text-[12px] !text-white !font-normal"} tag={"h2"} title={"ACCOUNT PAGES"}/>
           <SideBarItem to={"/profile"} icon={<Profil/>} title={"Profile"}/>
           <SideBarItem to={"/sign_in"} icon={<SignIn/>} title={"Sign In"}/>
           <SideBarItem to={"/sign_up"} icon={<SignUp/>} title={"Sign Up"}/>
         </div>
-        <div className="bg-need p-[16px]">
+        <div className="bg-need p-[16px] mt-[60px]">
           <div className="w-[35px] h-[35px] rounded-[12px] justify-center items-center flex bg-white">
             <SoroqIcon />
           </div>
