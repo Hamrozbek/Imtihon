@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Heading } from '../../components'
+import { Heading, Text } from '../../components'
 import DashboardItem from '../../modules/DashboardItem'
 import { AddIcon, DeletIcon, EditIcon } from '../../assets/icons'
 import TabelsProject from '../../modules/TabelsProject'
@@ -8,6 +8,7 @@ const Tables = () => {
   const [users, setUsers] = useState([])
   const [editUserId, setEditUserId] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [searchQuary, setSearchQuary] = useState("")
   const [newUser, setNewUser] = useState({
     img: "",
     name: "",
@@ -28,6 +29,18 @@ const Tables = () => {
     const { name, value } = e.target;
     setNewUser(prev => ({ ...prev, [name]: value }));
   }
+  // searchb part 
+  const handleSearch = (e) => {
+    setSearchQuary(e.target.value)
+  }
+
+  const filteredUsers = users.filter(user =>
+    `${user.name} ${user.surname}`.toLowerCase().includes(searchQuary.toLowerCase()) ||
+    user.email.toLowerCase().includes(searchQuary.toLowerCase()) ||
+    user.func.toLowerCase().includes(searchQuary.toLowerCase()) ||
+    user.role.toLowerCase().includes(searchQuary.toLowerCase()) ||
+    user.status.toLowerCase().includes(searchQuary.toLowerCase())
+  )
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -104,7 +117,7 @@ const Tables = () => {
 
   return (
     <div className='containers'>
-      <DashboardItem type={"text"} name={"search-input"} placeholder={"Type here..."} text={"Tables"} item={"Tables"} />
+      <DashboardItem type={"text"} name={"search-input"} placeholder={"Type here..."} text={"Tables"} item={"Tables"} onChange={handleSearch} />
       <div className='pt-[20px] px-[10px]'>
         <div className='bgg rounded-[20px] p-[15px]'>
           <div className='flex justify-between items-center'>
@@ -123,8 +136,8 @@ const Tables = () => {
                 </tr>
               </thead>
               <tbody className="text-white">
-                {users.length > 0 ? (
-                  users.map(user => (
+                {filteredUsers.length > 0 ? (
+                  filteredUsers.map(user => (
                     <tr key={user.id} className="border-b border-[#56577A]">
                       <td>
                         <div className='py-1 flex items-center gap-[5px]'>
@@ -141,8 +154,8 @@ const Tables = () => {
                       </td>
                       <td className="py-1">
                         <button onClick={() => toggleStatus(user.id)} className={`cursor-pointer rounded-[8px] text-[14px] px-[10px] ${user.status === "Online"
-                            ? "bg-[#01B574] text-white border border-[#01B574]"
-                            : "border border-white text-white"}`}>
+                          ? "bg-[#01B574] text-white border border-[#01B574]"
+                          : "border border-white text-white"}`}>
                           {user.status}
                         </button>
                       </td>
@@ -166,7 +179,7 @@ const Tables = () => {
 
           {/* Modal */}
           {isModalOpen && (
-            <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50'>
+            <div className='fixed inset-0 bg-black flex justify-center items-center z-50'>
               <div className="bg-white p-6 rounded-[10px] w-[500px]">
                 <form autoComplete='off' onChange={handleChange} className=' flex flex-col gap-3'>
                   <div className='relative w-[100px] h-[100px] mx-auto rounded-full border overflow-hidden'>
@@ -206,6 +219,14 @@ const Tables = () => {
           )}
         </div>
         <TabelsProject />
+      </div>
+      <div className="absolute bottom-0 right-0 w-[1100px] py-[20px] px-[20px] flex items-center justify-between">
+        <Text title={"@ 2021, Made with ❤️ by Simmmple & Creative Tim for a better web"} />
+        <div className="flex items-center gap-[30px]">
+          <Text title={"Marketplace"} />
+          <Text title={"Blog"} />
+          <Text title={"License"} />
+        </div>
       </div>
     </div>
   )

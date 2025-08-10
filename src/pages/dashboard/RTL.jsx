@@ -1,9 +1,9 @@
-import React from 'react'
+import DashboardItem from '../../modules/DashboardItem'
 
 const RTL = () => {
   return (
     <div>
-      rtl
+      <DashboardItem type={"text"} name={"search-input"} placeholder={"Type here..."} text={"Rtl"} item={"Rtl"} />
     </div>
   )
 }

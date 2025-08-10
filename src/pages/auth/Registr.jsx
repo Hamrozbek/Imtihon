@@ -60,13 +60,13 @@ const Registr = () => {
                     <ToggleSwitch />
                     <Text extraClass={"!text-[12px]"} title={" Remember me "} />
                   </div>
-                  <div className="w-[350px] pt-[15px]">
+                  <div className="w-[350px] pt-[10px]">
                     <ButtonI type={"submit"}>SIGN UP</ButtonI>
                   </div>
                 </form>
               </div>
               <Link to="/login">
-                <div className="flex items-center py-[17px]  justify-center">
+                <div className="flex items-center py-[13px]  justify-center">
                   <Text extraClass={"!text-[#A0AEC0]"} title={"Already have an account?"} />
                   <span className="font-bold text-[14px] text-[#FFFFFF]">Sign in</span>
                 </div>
@@ -74,7 +74,7 @@ const Registr = () => {
             </div>
             <div className="absolute bottom-[10px]">
               <Text extraClass={"!text-[#A0AEC0]"} title={"@ 2021, Made with ❤️ by Simmmple & Creative Tim for a better web"} />
-              <div className="flex pt-[9px] pl-[100px] gap-[36px]">
+              <div className="flex pt-[5px] pl-[100px] gap-[30px]">
                 <Text extraClass={"!text-[#A0AEC0]"} title={"Marketplace"} />
                 <Text extraClass={"!text-[#A0AEC0]"} title={"Blog"} />
                 <Text extraClass={"!text-[#A0AEC0]"} title={"License"} />

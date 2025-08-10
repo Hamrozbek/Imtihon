@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { AddIcon, ChekIcon, DeletIcon, EditIcon } from "../assets/icons"
+import { AddIconProject, ChekIcon, DeletIcon, EditIcon } from "../assets/icons"
 import { Heading } from "../components"
 
 const TabelsProject = () => {
@@ -69,7 +69,7 @@ const TabelsProject = () => {
     // delete part 
     const deleteProject = (id) => {
         if (window.confirm("O'chirmoqchimisiz?")) {
-            const updated = projects.filter(item => item.it !== id)
+            const updated = projects.filter(item => item.id !== id)
             setProjects(updated)
             localStorage.setItem("projects", JSON.stringify(updated))
         }
@@ -83,8 +83,6 @@ const TabelsProject = () => {
         setIsModalOpen(true)
     }
 
-
-
     return (
         <div className="pt-[24px]">
             <div className="bgg rounded-[20px] p-[15px]">
@@ -96,7 +94,7 @@ const TabelsProject = () => {
                             <p className="text-[14px] text-[#A0AEC0] font-bold">30 done<span className="text-[14px] text-[#A0AEC0] font-bold"> this month</span> </p>
                         </div>
                     </div>
-                    <button onClick={() => setIsModalOpen(true)} className='text-white cursor-pointer'><AddIcon /></button>
+                    <button onClick={() => setIsModalOpen(true)} className='text-white cursor-pointer'><AddIconProject/></button>
                 </div>
                 <div className="overflow-x-auto pt-5">
                     <table className="min-w-full">
@@ -155,7 +153,7 @@ const TabelsProject = () => {
                 {/* modal  */}
 
                 {isModalOpen && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex flex-col items-center z-50">
+                    <div className="fixed inset-0 bg-black bg-opacity-100 flex justify-center items-center z-50">
                         <div className="bg-white p-6 rounded-[10px] w-[500px]">
                             <form autoComplete="off" onChange={handleChange} className="flex flex-col gap-3">
                                 <div className="relative w-[100px] h-[100px] mx-auto rounded-full border overflow-hidden">

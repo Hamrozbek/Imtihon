@@ -1,9 +1,9 @@
-import React from 'react'
+import DashboardItem from '../../modules/DashboardItem'
 
 const Sign_Up = () => {
   return (
     <div>
-      Sign_Up
+      <DashboardItem type={"text"} name={"search-input"} placeholder={"Type here..."} text={"Sign Up"} item={"Sign Up"} />
     </div>
   )
 }

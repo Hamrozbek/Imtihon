@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { ProfileIconn, RingIcon, SearchiIcon, SettingisIcon } from "../assets/icons"
 import { useCookies } from "react-cookie";
 
-const DashboardItem = ({ name, text, type, placeholder, item }) => {
+const DashboardItem = ({ name, text, type, placeholder, item, onChange , value}) => {
     const navigate = useNavigate();
     const [, , removeCookie] = useCookies(["token"]);
 
@@ -22,12 +22,12 @@ const DashboardItem = ({ name, text, type, placeholder, item }) => {
             <div className="flex items-center gap-[18px]">
                 <div className="flex items-center bg-[#0F1535] py-[9px] w-[200px] rounded-[15px]">
                     <SearchiIcon />
-                    <input type={type} name={name} placeholder={placeholder} className="text-[#718096] text-[14px] outline-none" />
+                    <input type={type} name={name} placeholder={placeholder} onChange={onChange} value={value} className="text-[#718096] text-[14px] outline-none" />
                 </div>
                 <div className="flex items-center gap-[20px]">
                     <div className="flex items-center gap-[4px]">
                         <ProfileIconn />
-                        <button onClick={handleSignOut} className="text-[14px] text-[#718096] cursor-pointer">Sign Out</button>
+                        <button onClick={handleSignOut} className="text-[14px] text-[#718096] cursor-pointer">Log Out</button>
                     </div>
                     <div className="flex items-center gap-[15px]">
                         <SettingisIcon />
