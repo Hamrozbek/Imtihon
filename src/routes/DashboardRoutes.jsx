@@ -16,8 +16,8 @@ const DashboardRoutes = () => {
                     <Route path="/billing" element={<Billing />} />
                     <Route path="/rtl" element={<RTL />} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/sign_in" element={<Sign_In />} />
-                    <Route path="/sign_up" element={<Sign_Up />} />
+                    <Route path="/signIn" element={<Sign_In />} />
+                    <Route path="/signUp" element={<Sign_Up />} />
                 </Routes>
             </div>
         </div>
