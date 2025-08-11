@@ -32,7 +32,7 @@ const Profile = () => {
             <h2 className="text-white font-bold text-[18px]">{user.name}</h2>
             <p className="text-white font-normal text-[16px]">Email: {user.email}</p>
             <p className="text-white font-normal text-[14px]">Password: {user.password}</p>
-            <button onClick={handleSignOut} className="cursor-pointer text-white text-[14px] bg-red-500 py-[1px] px-[10px] rounded-[10px] mt-4">Log Out</button>
+            <button onClick={handleSignOut} className="cursor-pointer text-white text-[14px] bg-red-500 hover:bg-red-400 duration-300 outline-none py-[1px] px-[10px] rounded-[10px] mt-4">Log Out</button>
           </div>
         </div>
       ) : (

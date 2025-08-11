@@ -23,12 +23,12 @@ const Registr = () => {
           <Heading tag={"h1"} title={"THE VISION UI DASHBOARD"} />
         </div>
         <div className="w-[50%] relative pl-[55px] pt-[70px] min-h-screen part-right">
-          <div className="w-[452px]">
-            <div className="text-center mx-auto w-[333px] pb-[15px]">
+          <div className="w-[430px]">
+            <div className="text-center mx-auto w-[333px] pb-[10px]">
               <Heading tag={"h2"} title={"Welcome!"} />
               <Text title={"Use these awesome forms to login or create new account in your project for free."} />
             </div>
-            <div className="text-center pt-[20px] borderb rounded-[31px] border-[2px] border-white">
+            <div className="text-center pt-[10px] borderb rounded-[31px] border-[2px] border-white">
               <Heading extraClass={"!font-bold !text-[18px] !pb-[15px]"} tag={"h3"} title={"Register with"} />
               <div className="flex gap-[10px] justify-center">
                 <div className="text-white w-[60px] h-[60px] borderb border-[2px] flex flex-col justify-center items-center rounded-[20px] ">
@@ -41,7 +41,7 @@ const Registr = () => {
                   <GoogleIcon />
                 </div>
               </div>
-              <div className="pl-[44px]">
+              <div className="w-[350px] mx-auto">
                 <form autoComplete="off" onSubmit={handleRegister} className="pt-[10px] text-start">
                   <label>
                     <Text title={"Name"} />

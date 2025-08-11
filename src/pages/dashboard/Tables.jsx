@@ -29,7 +29,7 @@ const Tables = () => {
     const { name, value } = e.target;
     setNewUser(prev => ({ ...prev, [name]: value }));
   }
-  // searchb part 
+  // search part 
   const handleSearch = (e) => {
     setSearchQuary(e.target.value)
   }
@@ -124,7 +124,7 @@ const Tables = () => {
             <Heading extraClass={"!text-[18px]"} tag={"h2"} title={"Authors Table"} />
             <button onClick={() => setIsModalOpen(true)} className='text-white cursor-pointer'><AddIcon /></button>
           </div>
-          <div className="overflow-x-auto pt-5">
+          <div className="pt-5">
             <table className="min-w-full">
               <thead>
                 <tr className="text-gray-400 text-[12px] border-b border-gray-700">
@@ -141,7 +141,7 @@ const Tables = () => {
                     <tr key={user.id} className="border-b border-[#56577A]">
                       <td>
                         <div className='py-1 flex items-center gap-[5px]'>
-                          <img className='object-cover rounded-[8px]' src={user.img} alt="img" width={30} height={30} />
+                          <img className='object-cover w-[30px] h-[30px] rounded-[8px]' src={user.img} alt="img" width={30} height={30} />
                           <div>
                             <p className="font-normal text-[14px]">{user.name} {user.surname}</p>
                             <p className="text-[#A0AEC0] text-[12px]">{user.email}</p>
@@ -153,9 +153,9 @@ const Tables = () => {
                         <p className="text-[#A0AEC0] text-[14px]">{user.role}</p>
                       </td>
                       <td className="py-1">
-                        <button onClick={() => toggleStatus(user.id)} className={`cursor-pointer rounded-[8px] text-[14px] px-[10px] ${user.status === "Online"
-                          ? "bg-[#01B574] text-white border border-[#01B574]"
-                          : "border border-white text-white"}`}>
+                        <button onClick={() => toggleStatus(user.id)} className={`cursor-pointer rounded-[8px] text-[14px] ${user.status === "Online"
+                          ? "bg-[#01B574] text-white border px-[8.5px] border-[#01B574]"
+                          : "border border-white text-white px-[7px]"}`}>
                           {user.status}
                         </button>
                       </td>
@@ -220,7 +220,7 @@ const Tables = () => {
         </div>
         <TabelsProject />
       </div>
-      <div className="absolute bottom-0 right-0 w-[1100px] py-[20px] px-[20px] flex items-center justify-between">
+      <div className="bottom-0 right-0 pt-[170px] pb-[30px] px-[20px] flex items-center justify-between">
         <Text title={"@ 2021, Made with ❤️ by Simmmple & Creative Tim for a better web"} />
         <div className="flex items-center gap-[30px]">
           <Text title={"Marketplace"} />
